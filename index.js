@@ -4,6 +4,13 @@ var gamePrompt = require(game-prompt);
 var colors = require(colors);
 
 function intro () {
-  game
+  gamePrompt([
+    'You are the captain of the Battlestar Galactica, under the leadership' +
+    'of Commander William Adama on an expedition to find other living beings' +
+    'in space after the destruction of the Twelve Colonies. Your mission is' +
+    'to make contact with three groups of survivors, acquire food, Tylium,' +
+    ' and tools, and make your way to settle on Earth.',
+    'A voice comes over the intercom as you unlock the control room'.red
+    '"State your name for identification"'
+  ]saveName);
 }
-"You are the captain of a Solo Research Space Vehicle (S.R.S.V.) on an expedition to explore foreign planets. Your mission is to make contact with three alien life forms, acquire an artifact representative of their culture, and bring back your findings to Earth."
