@@ -3,7 +3,9 @@
 var gamePrompt = require(game-prompt);
 var colors = require(colors);
 
-function intro () {
+var gameName;
+
+function intro() {
   gamePrompt([
     'You are the captain of the Battlestar Galactica, under the leadership' +
     'of Commander William Adama on an expedition to find other living beings' +
@@ -13,4 +15,13 @@ function intro () {
     'A voice comes over the intercom as you unlock the control room'.red
     '"State your name for identification"'
   ]saveName);
+}
+
+function saveName(name) {
+  gameName = name
+
+  gamePrompt([
+    ""Thank you Captain " + gameName + "."" +
+    "Please enter the control room."
+  ] enterControlRoom)
 }
