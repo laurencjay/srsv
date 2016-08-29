@@ -5,6 +5,10 @@ var colors = require('colors');
 
 var gameName;
 
+function begin() {
+  gamePrompt(['A Battlestar Galatica Adventure\nPress ENTER to start'.red, intro]);
+}
+
 function intro() {
   gamePrompt([
     'You are the captain of the Battlestar Galactica, under the leadership' +
@@ -19,7 +23,6 @@ function intro() {
 
 function saveName(name) {
   gameName = name
-
   gamePrompt([
     'Thank you Captain " + gameName + "."' +
     'Please enter the control room.'
@@ -27,9 +30,11 @@ function saveName(name) {
 }
 
 function enterControlRoom() {
-  gamePrompt({
+  gamePrompt([
     'Commander Adama welcomes you to the control room' +
-    '"Hello Captain"'.red + gameName.red + '"Lets begin to chart our course"' +
+    '"Hello Captain "'.red + gameName + '"Lets begin to chart our course"'.red +
     '"Where to first?"'
-  }, locationSelection);
+  ], locationSelection);
 }
+
+begin();
