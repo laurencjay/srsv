@@ -6,7 +6,7 @@ var colors = require('colors');
 var gameName;
 
 function begin() {
-  gamePrompt(['A Battlestar Galatica Adventure\nPress ENTER to start'.red, intro]);
+  gamePrompt(['A Battlestar Galatica Adventure\nPress ENTER to start'.red],intro);
 }
 
 function intro() {
