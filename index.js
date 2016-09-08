@@ -4,6 +4,63 @@ var gamePrompt = require('game-prompt');
 var colors = require('colors');
 
 var gameName;
+var destinations = [
+  {
+    name: 'Aerilon',
+    distance: 10,
+    handler: approachAerilon
+  },
+  {
+    name: 'Aquaria',
+    distance: 60,
+    handler: approachAquaria
+  },
+  {
+    name: 'Canceron',
+    distance: 100,
+    handler: approachCanceron
+  },
+  {
+    name: 'Leonis',
+    distance: 65,
+    handler: approachLeonis
+  },
+  {
+    name: 'Libran',
+    distance: 90,
+    handler: approachLibran
+  },
+  {
+    name: 'Picon',
+    distance: 20,
+    handler: approachPicon
+  },
+  {
+    name: 'Sagittaron',
+    distance: 40,
+    handler: approachSaggittaron
+  },
+  {
+    name: "Scorpia",
+    distance: 45,
+    handler: approachScorpia
+  },
+  {
+    name: "Tauron",
+    distance: 100,
+    handler: approachTauron
+  },
+  {
+    name: "Virgon",
+    distance: 35,
+    handler: approachVirgon
+  },
+  {
+    name: "Earth",
+    distance: 120,
+    handler: approachEarth
+  },
+];
 
 function begin() {
   gamePrompt(['A Battlestar Galatica Adventure\nPress ENTER to start'.red],intro);
@@ -35,6 +92,12 @@ function enterControlRoom() {
     '"Hello Captain "'.red + gameName + '"Lets begin to chart our course"'.red +
     '"Where to first?"'
   ], locationSelection);
+}
+
+function locationSelection() {
+  gamePrompt([
+      'Where would you like to go Captain?'
+  ])
 }
 
 begin();
