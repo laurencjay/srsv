@@ -62,6 +62,8 @@ var destinations = [
   },
 ];
 
+var fuel = 500;
+
 function begin() {
   gamePrompt(['A Battlestar Galatica Adventure\nPress ENTER to start'.red],intro);
 }
@@ -96,7 +98,11 @@ function enterControlRoom() {
 
 function locationSelection() {
   gamePrompt([
-      'Where would you like to go Captain?'
+    var fuelPrompt = 'You have ' + fuel + ' gallons of fuel remaining';
+    var travelPrompt =  'Where would you like to go Captain? ' + gameName;
+    destinations.forEach(function(destination){
+      
+    })
   ])
 }
 
