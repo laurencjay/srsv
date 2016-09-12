@@ -97,13 +97,17 @@ function enterControlRoom() {
 }
 
 function locationSelection() {
-  gamePrompt([
     var fuelPrompt = 'You have ' + fuel + ' gallons of fuel remaining';
     var travelPrompt =  'Where would you like to go Captain? ' + gameName;
     destinations.forEach(function(destination){
-      
-    })
-  ])
+      travelPrompt += '\n(' +destination.name.charAt(0) + ')' +
+      destination.name.substr(1) + ' - ' +
+      destination.distance + ' lightyears';
+    });
+   gamePrompt([
+     fuelPrompt,
+     travelPrompt
+   ], travel);
 }
 
 begin();
